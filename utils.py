@@ -28,7 +28,7 @@ def get_by_pk(pk):
 def get_by_skill(skill_name: str):
     candidate_by_skills = []
     for candidate in load_candidates(CANDIDATES):
-        if  skill_name.lower() in candidate["skills"].lower().split(", "):
+        if skill_name.lower() in candidate["skills"].lower().split(", "):
             candidate_output = "\n".join(
                 [candidate["name"], candidate["position"],
                  candidate["skills"]])
