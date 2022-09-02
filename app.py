@@ -11,16 +11,13 @@ def all_candidate():
 
 @app.route("/candidates/<int:pk>")
 def candidates_by_pk_page(pk):
-    return f"1{get_by_pk(pk)}"
+    return f"<pre>{get_by_pk(pk)}</pre>"
 
 
 @app.route("/skills/<skill>/")
 def candidates_by_skill_page(skill):
-    return f"<pre>1{get_by_skill(skill)}</pre>"
+    return f"<pre>{get_by_skill(skill)}</pre>"
 
 
-@app.route("/asd")
-def a():
-    return "fdsga"
 if __name__ == '__main__':
     app.run()
