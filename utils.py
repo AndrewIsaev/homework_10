@@ -20,7 +20,7 @@ def get_all():
 def get_by_pk(pk):
     for candidate in load_candidates(CANDIDATES):
         if candidate["pk"] == pk:
-            url = candidate["picture"]
+            url = f"<img src='{candidate['picture']}'>"
             return '\n'.join([url, candidate["name"], candidate["position"],
                               candidate["skills"]])
 
