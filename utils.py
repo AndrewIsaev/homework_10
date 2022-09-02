@@ -16,11 +16,13 @@ def get_all():
         candidate_list.append(candidate_output)
     return '\n\n'.join(candidate_list)
 
+
 def get_by_pk(pk):
-    pass
+    for candidate in load_candidates(CANDIDATES):
+        if candidate["pk"] == pk:
+            url = candidate["picture"]
+            return '\n'.join([url, candidate["name"], candidate["position"], candidate["skills"]])
 
 
 def get_by_skill(skill_name):
     pass
-
-print(get_all())
